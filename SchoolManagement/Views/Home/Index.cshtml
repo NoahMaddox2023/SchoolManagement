@@ -55,15 +55,13 @@
         <p>
             Use this option to view all the courses available. 
         </p>
-        <p>@Html.ActionLink("All courses", "Index", "Courses"@*, new { @class = "btn btn-primary"}*@)</p>
+        <p>@Html.ActionLink("All courses", "Index", "Courses", null, new { @class = "btn btn-primary" })</p>
     </div>
     <div class="col-md-6">
         <h2>Students</h2>
         <p>
             View all the students that are currently enrolled.
         </p>
-        <p>
-        @Html.ActionLink("All students", "Index", "Students"@*, new { @class = "btn btn-info" }*@)
-        </p>              
+        <p>@Html.ActionLink("All students", "Index", "Students", null, new { @class = "btn btn-primary" })</p>              
     </div>
 </div>
