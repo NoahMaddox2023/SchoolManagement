@@ -10,7 +10,7 @@ using SchoolManagement.Models;
 
 namespace SchoolManagement.Controllers
 {
-    [Authorize(Roles = "Teacher")]
+    [Authorize(Roles = "Teacher,Admin")]
     public class CoursesController : Controller
     {
         private SchoolManagement_DBEntities db = new SchoolManagement_DBEntities();
@@ -39,7 +39,7 @@ namespace SchoolManagement.Controllers
         // GET: Courses/Create
         public ActionResult Create()
         {
-            return View();
+            return View(new Course());
         }
 
         // POST: Courses/Create

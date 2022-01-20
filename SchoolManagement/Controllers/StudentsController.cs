@@ -10,7 +10,7 @@ using SchoolManagement.Models;
 
 namespace SchoolManagement.Controllers
 {
-    [Authorize(Roles = "Teacher")]
+    [Authorize(Roles = "Teacher,Admin")]
     public class StudentsController : Controller
     {
         private SchoolManagement_DBEntities db = new SchoolManagement_DBEntities();
@@ -48,7 +48,7 @@ namespace SchoolManagement.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "StudentID,LastName,FirstName,EnrollmentDate,MiddleName,BirthDate")] Student student)
+        public ActionResult Create([Bind(Include = "StudentID,StudentLastName,StudentFirstName,StudentEnrollmentDate,StudentMiddleName,StudentBirthDate")] Student student)
         {
             if (ModelState.IsValid)
             {
@@ -56,7 +56,6 @@ namespace SchoolManagement.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
             return View(student);
         }
 
@@ -80,7 +79,7 @@ namespace SchoolManagement.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "StudentID,LastName,FirstName,EnrollmentDate,MiddleName,BirthDate")] Student student)
+        public ActionResult Edit([Bind(Include = "StudentID,StudentLastName,StudentFirstName,StudentEnrollmentDate,StudentMiddleName,StudentBirthDate")] Student student)
         {
             if (ModelState.IsValid)
             {

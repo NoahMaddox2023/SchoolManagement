@@ -140,7 +140,7 @@ namespace SchoolManagement.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
-            ViewBag.Roles = new SelectList(context.Roles.Where(q => !q.Name.Contains("Admin")).ToList(), "Name", "Name");
+            ViewBag.Roles = new SelectList(context.Roles.Where(q => !q.Name.Contains("Admin")).ToList(), "Name", "Name","Name");
             return View(new RegisterViewModel());
         }
 

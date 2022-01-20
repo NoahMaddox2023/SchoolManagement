@@ -21,11 +21,11 @@ namespace SchoolManagement.Models
         }
     
         public int StudentID { get; set; }
-        public string LastName { get; set; }
-        public string FirstName { get; set; }
-        public System.DateTime EnrollmentDate { get; set; }
-        public string MiddleName { get; set; }
-        public System.DateTime BirthDate { get; set; }
+        public string StudentLastName { get; set; }
+        public string StudentFirstName { get; set; }
+        public System.DateTime StudentEnrollmentDate { get; set; }
+        public string StudentMiddleName { get; set; }
+        public System.DateTime StudentBirthDate { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Enrollment> Enrollments { get; set; }

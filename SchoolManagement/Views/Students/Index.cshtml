@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<SchoolManagement.Models.Student>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Students";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -13,19 +13,19 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.LastName)
+            @Html.DisplayNameFor(model => model.StudentFirstName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.FirstName)
+            @Html.DisplayNameFor(model => model.StudentMiddleName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.EnrollmentDate)
+            @Html.DisplayNameFor(model => model.StudentLastName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.MiddleName)
+            @Html.DisplayNameFor(model => model.StudentBirthDate)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.BirthDate)
+            @Html.DisplayNameFor(model => model.StudentEnrollmentDate)
         </th>
         <th></th>
     </tr>
@@ -33,19 +33,19 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.LastName)
+            @Html.DisplayFor(modelItem => item.StudentFirstName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.FirstName)
+            @Html.DisplayFor(modelItem => item.StudentMiddleName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.EnrollmentDate)
+            @Html.DisplayFor(modelItem => item.StudentLastName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.MiddleName)
+            @Html.DisplayFor(modelItem => item.StudentBirthDate)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.BirthDate)
+            @Html.DisplayFor(modelItem => item.StudentEnrollmentDate)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.StudentID }) |

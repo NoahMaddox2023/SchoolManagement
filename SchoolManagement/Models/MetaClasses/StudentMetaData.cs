@@ -12,21 +12,21 @@ namespace SchoolManagement.Models
 
         [StringLength(50)]
         [Display(Name = "First Name")]
-        public string FirstName { get; set; }
+        public string StudentFirstName { get; set; }
 
         [StringLength(50)]
         [Display(Name = "Middle Name")]
-        public string MiddleName { get; set; }
+        public string StudentMiddleName { get; set; }
 
         [StringLength(50)]
         [Display(Name = "Last Name")]
-        public string LastName { get; set; }
+        public string StudentLastName { get; set; }
 
         [Display(Name = "Birth Date")]
-        public DateTime? BirthDate { get; set; }
+        public DateTime? StudentBirthDate { get; set; }
 
         [Display(Name ="Date of Enrollment")]
-        public DateTime? EnrollmentDate { get; set; }
+        public DateTime? StudentEnrollmentDate { get; set; }
 
         
     }
